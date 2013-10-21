@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project name="NUbots Project Page" default="deployToStaging">
+
+	<target name="deployToStaging">
+		<scp todir="projectpage@localhost:/home/projectpage/staging.nubots.net"
+		     port="8888"
+		     trust="true"
+		     password="hs78sEFnLWg3B2mR2k8p">
+			<fileset dir="site"/>
+		</scp>
+	</target>
+	
+	<target name="deployToProduction">
+	   <scp todir="projectpage@localhost:/home/projectpage/nubots.net"
+             port="8888"
+             trust="true"
+             password="hs78sEFnLWg3B2mR2k8p">
+            <fileset dir="site"/>
+        </scp>
+	</target>
+
+</project>
